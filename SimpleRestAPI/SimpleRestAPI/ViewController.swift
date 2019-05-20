@@ -15,17 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func makeGetCall() {
-        // Set up URL request
-        
-        let todoEndPoint: String = "https://jsonplaceholder.typicode.com/todos/1"
-        
-        
-        
-        
-        
-    }
-    
+   
     
 }
 
