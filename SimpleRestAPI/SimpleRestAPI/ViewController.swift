@@ -14,8 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        makeGetCall()
-        makePostCall()
+//        makeGetCall()
+//        makePostCall()
+        makeDeleteCall()
+
     }
     func makePostCall(){
   
@@ -128,5 +130,37 @@ class ViewController: UIViewController {
         
         task.resume()
     }
+    
+    
+    func makeDeleteCall() {
+        
+        let firstTodoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
+        var firstTodoUrlRequest = URLRequest(url: URL(string: firstTodoEndpoint)!)
+        firstTodoUrlRequest.httpMethod = "DELETE"
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: firstTodoUrlRequest) {
+            (data, response, error) in
+            guard let _ = data else {
+                print("error calling DELETE on /todos/1")
+                return
+            }
+            print("DELETE ok")
+        }
+        task.resume()
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
