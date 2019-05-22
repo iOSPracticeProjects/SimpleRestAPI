@@ -12,6 +12,7 @@
 		0FF087BC2293645E0016C05C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF087BA2293645E0016C05C /* Main.storyboard */; };
 		0FF087BE229364600016C05C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF087BD229364600016C05C /* Assets.xcassets */; };
 		0FF087C1229364600016C05C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF087BF229364600016C05C /* LaunchScreen.storyboard */; };
+		A29C16F5D2C7DF71B4CCC7C2 /* Pods_SimpleRestAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9C2B424E1145AA1ADAE124 /* Pods_SimpleRestAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0FF087BD229364600016C05C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FF087C0229364600016C05C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FF087C2229364600016C05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9C2B424E1145AA1ADAE124 /* Pods_SimpleRestAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleRestAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB51D3C42546E24380B53A5E /* Pods-SimpleRestAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRestAPI.release.xcconfig"; path = "Target Support Files/Pods-SimpleRestAPI/Pods-SimpleRestAPI.release.xcconfig"; sourceTree = "<group>"; };
+		DAF53246498DCE1C2676AA00 /* Pods-SimpleRestAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRestAPI.debug.xcconfig"; path = "Target Support Files/Pods-SimpleRestAPI/Pods-SimpleRestAPI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29C16F5D2C7DF71B4CCC7C2 /* Pods_SimpleRestAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				0FF087B52293645E0016C05C /* SimpleRestAPI */,
 				0FF087B42293645E0016C05C /* Products */,
+				35D1B2DA78B398B1A3165FAE /* Pods */,
+				EDE90068FFDCA9A9EA80428A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = SimpleRestAPI;
 			sourceTree = "<group>";
 		};
+		35D1B2DA78B398B1A3165FAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAF53246498DCE1C2676AA00 /* Pods-SimpleRestAPI.debug.xcconfig */,
+				BB51D3C42546E24380B53A5E /* Pods-SimpleRestAPI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDE90068FFDCA9A9EA80428A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC9C2B424E1145AA1ADAE124 /* Pods_SimpleRestAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FF087C5229364600016C05C /* Build configuration list for PBXNativeTarget "SimpleRestAPI" */;
 			buildPhases = (
+				A69057521E9EFD7B10AE250F /* [CP] Check Pods Manifest.lock */,
 				0FF087AF2293645E0016C05C /* Sources */,
 				0FF087B02293645E0016C05C /* Frameworks */,
 				0FF087B12293645E0016C05C /* Resources */,
+				15184CF455F6EA39E976822F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15184CF455F6EA39E976822F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleRestAPI/Pods-SimpleRestAPI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleRestAPI/Pods-SimpleRestAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69057521E9EFD7B10AE250F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleRestAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FF087AF2293645E0016C05C /* Sources */ = {
@@ -280,6 +354,7 @@
 		};
 		0FF087C6229364600016C05C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAF53246498DCE1C2676AA00 /* Pods-SimpleRestAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +372,7 @@
 		};
 		0FF087C7229364600016C05C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB51D3C42546E24380B53A5E /* Pods-SimpleRestAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
