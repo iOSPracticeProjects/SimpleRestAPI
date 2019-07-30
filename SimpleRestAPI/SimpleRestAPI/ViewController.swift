@@ -28,7 +28,7 @@ class ViewController: UITableViewController {
         
         // Do any additional setup after loading the view.
         
-//        makeGetCall()
+        makeGetCall()
 //        makePostCall()
        // makeDeleteCall()
         
@@ -133,7 +133,7 @@ class ViewController: UITableViewController {
     func makeGetCall() {
         //Set up the URL request
     
-        let todoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
+        let todoEndpoint: String = "http://www.reddit.com/.json"
         guard let url = URL(string: todoEndpoint) else {
             print("Error: cannot create URL")
             return
